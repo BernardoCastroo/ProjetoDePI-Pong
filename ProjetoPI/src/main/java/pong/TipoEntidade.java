@@ -1,5 +1,5 @@
 package pong;
 
-public class TipoEntidade {
-    
+public enum TipoEntidade {
+    RAQUETE, BOLA, PAREDE
 }
