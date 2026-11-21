@@ -37,7 +37,6 @@ public class PongJogo extends GameApplication {
 
         settings.setMainMenuEnabled(true);
         settings.setSceneFactory(new SceneFactory() {
-            @Override
             public FXGLMenu newMainMenu() {
                 return new MenuPrincipal();
             }
@@ -116,7 +115,6 @@ public class PongJogo extends GameApplication {
         });
     }
 
-    @Override
     protected void initUI() {
         Line linhaCentral = new Line(450, 0, 450, 600);
         linhaCentral.setStroke(Color.valueOf("#222222"));
