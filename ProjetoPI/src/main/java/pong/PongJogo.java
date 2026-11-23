@@ -219,6 +219,9 @@ public class PongJogo extends GameApplication {
         textoVitoria.setText(mensagem);
         textoVitoria.setVisible(true);
         textoInstrucao.setVisible(true);
+
+        textoVitoria.setTranslateX((900 - textoVitoria.getLayoutBounds().getWidth()) / 2);
+        textoInstrucao.setTranslateX((900 - textoInstrucao.getLayoutBounds().getWidth()) / 2);
     }
 
     private void reiniciarPartida() {
@@ -286,8 +289,12 @@ protected void onUpdate(double tpfFxgl) {
 
         bola.translate(velocidadeX * tpf, velocidadeY * tpf);
 
-        if (bola.getY() <= 0 || bola.getY() >= 580) {
-            bola.setProperty("velocidadeY", -velocidadeY);
+        if (bola.getY() <= 0) {
+            bola.setY(0);
+            bola.setProperty("velocidadeY", Math.abs(velocidadeY));
+        } else if (bola.getY() >= 580) {
+            bola.setY(580);
+            bola.setProperty("velocidadeY", -Math.abs(velocidadeY));
         }
 
         if (bola.getX() <= 5) {

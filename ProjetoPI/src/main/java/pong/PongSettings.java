@@ -16,9 +16,9 @@ public class PongSettings implements EntityFactory {
     public Entity novaBola(SpawnData data) {
         return FXGL.entityBuilder(data)
                 .type(TipoEntidade.BOLA)
-                .viewWithBBox(new Circle(10, Color.BLACK)) // Círculo com 10 de raio
-                .with(new CollidableComponent(true)) // Permite colisões
-                .with("velocidadeX", 300.0) // Guarda a velocidade na própria entidade
+                .viewWithBBox(new Circle(10, 10, 10, Color.BLACK))
+                .with(new CollidableComponent(true)) 
+                .with("velocidadeX", 300.0) 
                 .with("velocidadeY", 300.0)
                 .build();
     }
