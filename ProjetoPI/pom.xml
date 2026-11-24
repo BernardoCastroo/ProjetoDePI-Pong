@@ -15,7 +15,6 @@
     </properties>
 
     <dependencies>
-        <!-- Biblioteca do FXGL -->
         <dependency>
             <groupId>com.github.almasb</groupId>
             <artifactId>fxgl</artifactId>
